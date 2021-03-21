@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "vibrant-period-272906",
+  "private_key_id": "d44462db6203d2b5b9496a067d67dc9a1aa464a3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDSno0oqQACv1KN\n3h5XY3TNXvWBWYd//Kj2H70sTNwFGzQoec5RSKP4v45683TOnNFyTibnIDPNBT8o\nl10B52kw6BAptqgiTtwuKqJHaa61I7ZZhvP70gR7fWWBOGNLKK3z5YcmHEEhNRnH\nn9JihUeLaEHD8HAgDNQzMcDuZZfSmeivmUDKa8ex/hnR0m0yfP6UP7QRJmv2qhyE\nHTfFwypuGVyego0JkhZMc2Bd/kKl439sB9UIspxU4udi/zBeQJhQyKj/B+KPSz0f\npZfVaLrUjoGlKJeboFYk1araS7hrn1JmvR/Ok+8JYRkSj7EduweHqoKUD0L1MCih\n1q5Ng2XBAgMBAAECggEACr3WFGepFdrI1K4qNTn/6hzwj6ofnlwGCHZmLRkW5AZH\nBtTufCgEn9IyK6xYrdRi3K3mb0VtyuQcfF8a2dbh3yIIt/3mLYjA0zRurg5yX+/c\nNAztSs+jVaJ3r6tO6hV/KKgROFT6z90fzVXl8osaUt5sczgjGclZtaoxDR9+ipmh\n1V479xr9LWK49xBMPoCVLnUOrn7DNDtwbArqn5QCqXbgbQUEBjf/ljJIgir7V6D3\nW+3fY39oozkhM1EOvPP2coZse7pSyHEEDHjHUuHM6abh9R2G4vnuKY/vp3bxgXh5\n6pL9iMo6C+tK1kH/QSePZ4Ymn2cBQqcu8XeObvMj6QKBgQD9Uj6taHthQd2JD4AG\nj9Mnn6N+PkfmMFCd1IN/6h5DQlXeBFxGZIJ4Psg/SNeSjeBucTVit5O9awF1Djuk\nAF0Ogv+6FqVP1XZnEgfk90DwmOeeSgdOnOsCZrT+n9ec6pbtkBWNrIPQz7U74J9e\nGWXKYoL+IiKR6XT6UCHj8Yc3OQKBgQDU2LXDEF8wNfGlHslwouz1bTSeQNJZKQSl\nxzGUDTBoLtV+F9UQz6nogVoUNZRAlg8mUZfIATszFBAAWzw7/fEQgHcfXCF4Crzf\ng2Y+D9g+2S31sL4AlhjqRpabtg5u+h3vPxN7IkhFz/K2Hp8bWfovcDD+dkLsB2YA\nw5RrMWdayQKBgGNTuVHDMwWKjvPsCPYJtPDHbpLUltqSPTn1lu4z/VPAEe0w5oGP\nbXz6mQf/Zs+HI+YKK7WeZ6aQ64xbXVVL8zD6eo0bzgwElh2J+2By9pqgSclOG5le\ne+OAJB3mzOMxNKbHpTvc1f6tQtHMnJCIAtqdT+GXvthZos13WCKJlMw5AoGALb20\nsgreqfmtyJJpL++ThNrHKAs+KTMLcKTyHqMG+By4fLSacVZvaSwDM7yf85FMCCwY\ntj6tfjidh7YTp8DXAXjaIL8n4ihMlqwiWMwG6Nq7acVlz7JyAEbTLvtc9rSBolyn\nzxp69aXOvxytjK81eORfYw//KcIdRaTCTJb9YyECgYEArXgNJ+HNtt249X6ak5kO\nZ7B9OCnU9z9e7oOziw5Ogh1sGPIx4A8ylZMafbAadKen6lsTuyZ6seiHNSPZXW6w\njcRsPCz03Oo5FMbU8CLz9JF53UYJ6XUfw81AX7KGjnt9a+txrCGpv8IrK76yDtL4\nUnnBf3lnjY7Zdv+mejbAQxs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "study-nlp@vibrant-period-272906.iam.gserviceaccount.com",
+  "client_id": "117462320292839815999",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/study-nlp%40vibrant-period-272906.iam.gserviceaccount.com"
+}

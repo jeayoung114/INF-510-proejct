@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_83926591d9ce43c5a2ac8b72533ea84a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_83926591d9ce43c5a2ac8b72533ea84a" ></div>
+        
+</body>
+<script>    
+    
+            var map_83926591d9ce43c5a2ac8b72533ea84a = L.map(
+                "map_83926591d9ce43c5a2ac8b72533ea84a",
+                {
+                    center: [34.069026359999995, -118.31998142399996],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cdec64d848274978b75efabbc9136e9f = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_83926591d9ce43c5a2ac8b72533ea84a);
+        
+    
+        function geo_json_4392490161f84228b93bd2599898d781_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_83926591d9ce43c5a2ac8b72533ea84a.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_4392490161f84228b93bd2599898d781 = L.geoJson(null, {
+                onEachFeature: geo_json_4392490161f84228b93bd2599898d781_onEachFeature,
+            
+        });
+        function geo_json_4392490161f84228b93bd2599898d781_add (data) {
+            geo_json_4392490161f84228b93bd2599898d781.addData(data)
+                .addTo(map_83926591d9ce43c5a2ac8b72533ea84a);
+        }
+            geo_json_4392490161f84228b93bd2599898d781_add({"features": [{"geometry": {"coordinates": [-118.232515, 34.0344246], "type": "Point"}, "id": 0, "properties": {"Friday": "[\u00271130-0200\u0027]", "Monday": "[\u00271130-0200\u0027]", "Name": "Everson Royce Bar", "Open Hour": "[\u0027On Monday open : 1130 close 0200 open overnight : True\u0027, \u0027On Tuesday open : 1130 close 0200 open overnight : True\u0027, \u0027On Wednesday open : 1130 close 0200 open overnight : True\u0027, \u0027On Thursday open : 1130 close 0200 open overnight : True\u0027, \u0027On Friday open : 1130 close 0200 open overnight : True\u0027, \u0027On Saturday open : 1700 close 0200 open overnight : True\u0027, \u0027On Sunday open : 1400 close 0000 open overnight : False\u0027]", "Saturday": "[\u00271700-0200\u0027]", "Sunday": "[\u00271400-0000\u0027]", "Thursday": "[\u00271130-0200\u0027]", "Tuesday": "[\u00271130-0200\u0027]", "Wednesday": "[\u00271130-0200\u0027]", "address": "1936 E 7th St Los Angeles 90021", "famous_for": "Single Burger ", "highlight": {}, "rating_in_blog": "4", "rating_in_yelp": "4.5", "review number": "781", "sentiment_score_comment": "0.400", "sentiment_score_review": "0.400", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "61F", "weather": "Mostly Sunny", "webpage": "http://www.erbla.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.3381817, 34.0842081], "type": "Point"}, "id": 1, "properties": {"Friday": "[\u00271200-2300\u0027]", "Monday": "[\u00271200-2200\u0027]", "Name": "Petit Trois", "Open Hour": "[\u0027On Monday open : 1200 close 2200 open overnight : False\u0027, \u0027On Tuesday open : 1200 close 2200 open overnight : False\u0027, \u0027On Wednesday open : 1200 close 2200 open overnight : False\u0027, \u0027On Thursday open : 1200 close 2200 open overnight : False\u0027, \u0027On Friday open : 1200 close 2300 open overnight : False\u0027, \u0027On Saturday open : 1200 close 2300 open overnight : False\u0027, \u0027On Sunday open : 1200 close 2200 open overnight : False\u0027]", "Saturday": "[\u00271200-2300\u0027]", "Sunday": "[\u00271200-2200\u0027]", "Thursday": "[\u00271200-2200\u0027]", "Tuesday": "[\u00271200-2200\u0027]", "Wednesday": "[\u00271200-2200\u0027]", "address": "718 N Highland Ave Los Angeles 90038", "famous_for": "Big Mec ", "highlight": {}, "rating_in_blog": "5", "rating_in_yelp": "4.0", "review number": "847", "sentiment_score_comment": "0.200", "sentiment_score_review": "0.0, ", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "55F", "weather": "Mostly Sunny", "webpage": "http://petittrois.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.34342959999998, 34.0833655], "type": "Point"}, "id": 2, "properties": {"Friday": "[\u00271000-1900\u0027]", "Monday": "[\u00271000-1900\u0027]", "Name": "Standing\u0027s Butchery", "Open Hour": "[\u0027On Monday open : 1000 close 1900 open overnight : False\u0027, \u0027On Tuesday open : 1000 close 1900 open overnight : False\u0027, \u0027On Wednesday open : 1000 close 1900 open overnight : False\u0027, \u0027On Thursday open : 1000 close 1900 open overnight : False\u0027, \u0027On Friday open : 1000 close 1900 open overnight : False\u0027, \u0027On Saturday open : 0900 close 1700 open overnight : False\u0027, \u0027On Sunday open : 0900 close 1700 open overnight : False\u0027]", "Saturday": "[\u00270900-1700\u0027]", "Sunday": "[\u00270900-1700\u0027]", "Thursday": "[\u00271000-1900\u0027]", "Tuesday": "[\u00271000-1900\u0027]", "Wednesday": "[\u00271000-1900\u0027]", "address": "7016 Melrose Ave Los Angeles 90038", "famous_for": "Burgerdaddy ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "5.0", "review number": "77", "sentiment_score_comment": "0.699", "sentiment_score_review": "0.600", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "55F", "weather": "Mostly Sunny", "webpage": "http://standingsbutchery.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.3162573, 34.0601045], "type": "Point"}, "id": 3, "properties": {"Friday": "[\u00271030-0130\u0027]", "Monday": "[\u00271030-0100\u0027]", "Name": "In-N-Out Burger", "Open Hour": "[\u0027On Monday open : 1030 close 0100 open overnight : True\u0027, \u0027On Tuesday open : 1030 close 0100 open overnight : True\u0027, \u0027On Wednesday open : 1030 close 0100 open overnight : True\u0027, \u0027On Thursday open : 1030 close 0100 open overnight : True\u0027, \u0027On Friday open : 1030 close 0130 open overnight : True\u0027, \u0027On Saturday open : 1030 close 0130 open overnight : True\u0027, \u0027On Sunday open : 1030 close 0100 open overnight : True\u0027]", "Saturday": "[\u00271030-0130\u0027]", "Sunday": "[\u00271030-0100\u0027]", "Thursday": "[\u00271030-0100\u0027]", "Tuesday": "[\u00271030-0100\u0027]", "Wednesday": "[\u00271030-0100\u0027]", "address": "Various locations in LA Los Angeles", "famous_for": "Double-Double (Animal Style) ", "highlight": {}, "rating_in_blog": "5", "rating_in_yelp": "4.0", "review number": "1644", "sentiment_score_comment": "0.100", "sentiment_score_review": "0.300", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "56F", "weather": "Mostly Sunny", "webpage": "http://www.in-n-out.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.3672417, 34.091184000000005], "type": "Point"}, "id": 4, "properties": {"Friday": "[\u00271500-2000\u0027]", "Monday": "[\u0027not open\u0027]", "Name": "Connie and Ted\u0027s", "Open Hour": "[\u0027On Tuesday open : 1500 close 2000 open overnight : False\u0027, \u0027On Wednesday open : 1500 close 2000 open overnight : False\u0027, \u0027On Thursday open : 1500 close 2000 open overnight : False\u0027, \u0027On Friday open : 1500 close 2000 open overnight : False\u0027, \u0027On Saturday open : 1500 close 2000 open overnight : False\u0027]", "Saturday": "[\u00271500-2000\u0027]", "Sunday": "[\u0027not open\u0027]", "Thursday": "[\u00271500-2000\u0027]", "Tuesday": "[\u00271500-2000\u0027]", "Wednesday": "[\u00271500-2000\u0027]", "address": "8171 Santa Monica Blvd Los Angeles 90046", "famous_for": "The Hook Burger ", "highlight": {}, "rating_in_blog": "4", "rating_in_yelp": "4.0", "review number": "1880", "sentiment_score_comment": "0.400", "sentiment_score_review": "0.400", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "56F", "weather": "Mostly Sunny", "webpage": "http://www.connieandteds.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.2589207, 34.0998779], "type": "Point"}, "id": 5, "properties": {"Friday": "[\u0027not open\u0027]", "Monday": "[\u0027not open\u0027]", "Name": "Burgers Never Say Die", "Open Hour": "[\u0027On Sunday open : 1200 close 1930 open overnight : False\u0027]", "Saturday": "[\u0027not open\u0027]", "Sunday": "[\u00271200-1930\u0027]", "Thursday": "[\u0027not open\u0027]", "Tuesday": "[\u0027not open\u0027]", "Wednesday": "[\u0027not open\u0027]", "address": "2388 Glendale Blvd Los Angeles 90039", "famous_for": "Doubles ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "4.0", "review number": "501", "sentiment_score_comment": "0.800", "sentiment_score_review": "0.400", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "55F", "weather": "Mostly Sunny", "webpage": "http://www.burgersneversaydie.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.1314463, 34.1361523], "type": "Point"}, "id": 6, "properties": {"Friday": "[\u00270700-2200\u0027]", "Monday": "[\u00270700-2100\u0027]", "Name": "Pie \u0027n Burger", "Open Hour": "[\u0027On Monday open : 0700 close 2100 open overnight : False\u0027, \u0027On Tuesday open : 0700 close 2100 open overnight : False\u0027, \u0027On Wednesday open : 0700 close 2100 open overnight : False\u0027, \u0027On Thursday open : 0700 close 2100 open overnight : False\u0027, \u0027On Friday open : 0700 close 2200 open overnight : False\u0027, \u0027On Saturday open : 0700 close 2200 open overnight : False\u0027, \u0027On Sunday open : 0700 close 2100 open overnight : False\u0027]", "Saturday": "[\u00270700-2200\u0027]", "Sunday": "[\u00270700-2100\u0027]", "Thursday": "[\u00270700-2100\u0027]", "Tuesday": "[\u00270700-2100\u0027]", "Wednesday": "[\u00270700-2100\u0027]", "address": "913 E California Blvd Los Angeles 91106", "famous_for": "Singles ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "3.5", "review number": "1576", "sentiment_score_comment": "0.0, ", "sentiment_score_review": "0.300", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "53F", "weather": "Mostly Sunny", "webpage": "http://pienburger.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.3617507, 34.079227200000005], "type": "Point"}, "id": 7, "properties": {"Friday": "[\u00271800-2300\u0027]", "Monday": "[\u00271800-2200\u0027]", "Name": "Animal", "Open Hour": "[\u0027On Monday open : 1800 close 2200 open overnight : False\u0027, \u0027On Tuesday open : 1800 close 2200 open overnight : False\u0027, \u0027On Wednesday open : 1800 close 2200 open overnight : False\u0027, \u0027On Thursday open : 1800 close 2200 open overnight : False\u0027, \u0027On Friday open : 1800 close 2300 open overnight : False\u0027, \u0027On Saturday open : 1030 close 1430 open overnight : False\u0027, \u0027On Saturday open : 1800 close 2300 open overnight : False\u0027, \u0027On Sunday open : 1030 close 1430 open overnight : False\u0027, \u0027On Sunday open : 1800 close 2200 open overnight : False\u0027]", "Saturday": "[\u00271030-1430\u0027, \u00271800-2300\u0027]", "Sunday": "[\u00271030-1430\u0027, \u00271800-2200\u0027]", "Thursday": "[\u00271800-2200\u0027]", "Tuesday": "[\u00271800-2200\u0027]", "Wednesday": "[\u00271800-2200\u0027]", "address": "435 N Fairfax Ave Los Angeles 90036", "famous_for": "Boner Burger ", "highlight": {}, "rating_in_blog": "4", "rating_in_yelp": "4.0", "review number": "3372", "sentiment_score_comment": "0.400", "sentiment_score_review": "0.200", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "56F", "weather": "Mostly Sunny", "webpage": "http://www.animalrestaurant.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.4278502, 34.0406896], "type": "Point"}, "id": 8, "properties": {"Friday": "[\u00271100-2300\u0027]", "Monday": "[\u0027not open\u0027]", "Name": "the Apple Pan", "Open Hour": "[\u0027On Tuesday open : 1100 close 2100 open overnight : False\u0027, \u0027On Wednesday open : 1100 close 2100 open overnight : False\u0027, \u0027On Thursday open : 1100 close 2100 open overnight : False\u0027, \u0027On Friday open : 1100 close 2300 open overnight : False\u0027, \u0027On Saturday open : 1100 close 2300 open overnight : False\u0027, \u0027On Sunday open : 1100 close 2100 open overnight : False\u0027]", "Saturday": "[\u00271100-2300\u0027]", "Sunday": "[\u00271100-2100\u0027]", "Thursday": "[\u00271100-2100\u0027]", "Tuesday": "[\u00271100-2100\u0027]", "Wednesday": "[\u00271100-2100\u0027]", "address": "10801 W Pico Blvd Los Angeles 90064", "famous_for": "Hickory Burger ", "highlight": {}, "rating_in_blog": "4", "rating_in_yelp": "3.5", "review number": "2884", "sentiment_score_comment": "0.699", "sentiment_score_review": "0.200", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "57F", "weather": "Mostly Sunny", "webpage": "http://www.applepan.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.3005607, 34.0634255], "type": "Point"}, "id": 9, "properties": {"Friday": "[\u00271100-2100\u0027]", "Monday": "[\u00271100-2100\u0027]", "Name": "Cassell\u0027s Hamburgers", "Open Hour": "[\u0027On Monday open : 1100 close 2100 open overnight : False\u0027, \u0027On Tuesday open : 1100 close 2100 open overnight : False\u0027, \u0027On Wednesday open : 1100 close 2100 open overnight : False\u0027, \u0027On Thursday open : 1100 close 2100 open overnight : False\u0027, \u0027On Friday open : 1100 close 2100 open overnight : False\u0027, \u0027On Saturday open : 1100 close 2100 open overnight : False\u0027, \u0027On Sunday open : 1100 close 2100 open overnight : False\u0027]", "Saturday": "[\u00271100-2100\u0027]", "Sunday": "[\u00271100-2100\u0027]", "Thursday": "[\u00271100-2100\u0027]", "Tuesday": "[\u00271100-2100\u0027]", "Wednesday": "[\u00271100-2100\u0027]", "address": "3600 W 6th St Los Angeles 90020", "famous_for": "Patty Melt ", "highlight": {}, "rating_in_blog": "3", "rating_in_yelp": "4.0", "review number": "1581", "sentiment_score_comment": "0.5, ", "sentiment_score_review": "0.0, ", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "56F", "weather": "Mostly Sunny", "webpage": "http://www.cassellshamburgers.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.3530711, 34.0976531], "type": "Point"}, "id": 10, "properties": {"Friday": "[\u00271000-1500\u0027, \u00271615-0000\u0027]", "Monday": "[\u00271130-1500\u0027, \u00271615-2300\u0027]", "Name": "Electric Owl", "Open Hour": "[\u0027On Monday open : 1130 close 1500 open overnight : False\u0027, \u0027On Monday open : 1615 close 2300 open overnight : False\u0027, \u0027On Tuesday open : 1130 close 1500 open overnight : False\u0027, \u0027On Tuesday open : 1615 close 2300 open overnight : False\u0027, \u0027On Wednesday open : 1130 close 1500 open overnight : False\u0027, \u0027On Wednesday open : 1615 close 2300 open overnight : False\u0027, \u0027On Thursday open : 1130 close 1500 open overnight : False\u0027, \u0027On Thursday open : 1615 close 2300 open overnight : False\u0027, \u0027On Friday open : 1000 close 1500 open overnight : False\u0027, \u0027On Friday open : 1615 close 0000 open overnight : False\u0027, \u0027On Saturday open : 1000 close 0000 open overnight : False\u0027, \u0027On Sunday open : 1000 close 2300 open overnight : False\u0027]", "Saturday": "[\u00271000-0000\u0027]", "Sunday": "[\u00271000-2300\u0027]", "Thursday": "[\u00271130-1500\u0027, \u00271615-2300\u0027]", "Tuesday": "[\u00271130-1500\u0027, \u00271615-2300\u0027]", "Wednesday": "[\u00271130-1500\u0027, \u00271615-2300\u0027]", "address": "1451 N Gardner St West Hollywood 90046", "famous_for": "The Smash Burger ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "4.0", "review number": "383", "sentiment_score_comment": "0.0, ", "sentiment_score_review": "0.600", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "51F", "weather": "Mostly Sunny", "webpage": "http://www.electricowl.la"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.454532, 34.1792795], "type": "Point"}, "id": 11, "properties": {"Friday": "[\u00270900-1600\u0027]", "Monday": "[\u0027not open\u0027]", "Name": "Bill\u0027s Hamburgers", "Open Hour": "[\u0027On Tuesday open : 0830 close 1600 open overnight : False\u0027, \u0027On Wednesday open : 0830 close 1600 open overnight : False\u0027, \u0027On Thursday open : 0830 close 1600 open overnight : False\u0027, \u0027On Friday open : 0900 close 1600 open overnight : False\u0027]", "Saturday": "[\u0027not open\u0027]", "Sunday": "[\u0027not open\u0027]", "Thursday": "[\u00270830-1600\u0027]", "Tuesday": "[\u00270830-1600\u0027]", "Wednesday": "[\u00270830-1600\u0027]", "address": "14742 Oxnard St Los Angeles 91411", "famous_for": "Bacon Cheeseburger ", "highlight": {}, "rating_in_blog": "5", "rating_in_yelp": "4.5", "review number": "703", "sentiment_score_comment": "0.0, ", "sentiment_score_review": "0.300", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "56F", "weather": "Mostly Sunny", "webpage": "no_website"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.4984232, 34.0293315], "type": "Point"}, "id": 12, "properties": {"Friday": "[\u00271200-0100\u0027]", "Monday": "[\u00271700-0000\u0027]", "Name": "Father\u0027s Office", "Open Hour": "[\u0027On Monday open : 1700 close 0000 open overnight : False\u0027, \u0027On Tuesday open : 1700 close 0000 open overnight : False\u0027, \u0027On Wednesday open : 1700 close 0000 open overnight : False\u0027, \u0027On Thursday open : 1700 close 0000 open overnight : False\u0027, \u0027On Friday open : 1200 close 0100 open overnight : True\u0027, \u0027On Saturday open : 1200 close 0100 open overnight : True\u0027, \u0027On Sunday open : 1200 close 2300 open overnight : False\u0027]", "Saturday": "[\u00271200-0100\u0027]", "Sunday": "[\u00271200-2300\u0027]", "Thursday": "[\u00271700-0000\u0027]", "Tuesday": "[\u00271700-0000\u0027]", "Wednesday": "[\u00271700-0000\u0027]", "address": "1018 Montana Ave Los Angeles 90403", "famous_for": "Office Burger ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "3.5", "review number": "6023", "sentiment_score_comment": "-0.20", "sentiment_score_review": "0.100", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "57F", "weather": "Mostly Sunny", "webpage": "http://www.fathersoffice.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.4982155, 34.0155888], "type": "Point"}, "id": 13, "properties": {"Friday": "[\u00271130-2200\u0027]", "Monday": "[\u00271130-2200\u0027]", "Name": "HiHo Cheeseburger", "Open Hour": "[\u0027On Monday open : 1130 close 2200 open overnight : False\u0027, \u0027On Tuesday open : 1130 close 2200 open overnight : False\u0027, \u0027On Wednesday open : 1130 close 2200 open overnight : False\u0027, \u0027On Thursday open : 1130 close 2200 open overnight : False\u0027, \u0027On Friday open : 1130 close 2200 open overnight : False\u0027, \u0027On Saturday open : 1130 close 2200 open overnight : False\u0027, \u0027On Sunday open : 1130 close 2200 open overnight : False\u0027]", "Saturday": "[\u00271130-2200\u0027]", "Sunday": "[\u00271130-2200\u0027]", "Thursday": "[\u00271130-2200\u0027]", "Tuesday": "[\u00271130-2200\u0027]", "Wednesday": "[\u00271130-2200\u0027]", "address": "1320 2nd St Santa Monica 90401", "famous_for": "Double HiHo ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "4.0", "review number": "116", "sentiment_score_comment": "0.300", "sentiment_score_review": "0.300", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "57F", "weather": "Mostly Sunny", "webpage": "https://www.hiho.la"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.210492, 34.1395542], "type": "Point"}, "id": 14, "properties": {"Friday": "[\u00271100-2200\u0027]", "Monday": "[\u00271100-2200\u0027]", "Name": "Oinkster", "Open Hour": "[\u0027On Monday open : 1100 close 2200 open overnight : False\u0027, \u0027On Tuesday open : 1100 close 2200 open overnight : False\u0027, \u0027On Wednesday open : 1100 close 2200 open overnight : False\u0027, \u0027On Thursday open : 1100 close 2200 open overnight : False\u0027, \u0027On Friday open : 1100 close 2200 open overnight : False\u0027, \u0027On Saturday open : 1100 close 2200 open overnight : False\u0027, \u0027On Sunday open : 1100 close 2200 open overnight : False\u0027]", "Saturday": "[\u00271100-2200\u0027]", "Sunday": "[\u00271100-2200\u0027]", "Thursday": "[\u00271100-2200\u0027]", "Tuesday": "[\u00271100-2200\u0027]", "Wednesday": "[\u00271100-2200\u0027]", "address": "2005 Colorado Blvd Los Angeles 90041", "famous_for": "The Royale ", "highlight": {}, "rating_in_blog": "4", "rating_in_yelp": "4.0", "review number": "3608", "sentiment_score_comment": "0.800", "sentiment_score_review": "0.400", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "53F", "weather": "Mostly Sunny", "webpage": "http://www.theoinkster.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.3905505, 34.1422729], "type": "Point"}, "id": 15, "properties": {"Friday": "[\u00271200-1900\u0027]", "Monday": "[\u0027not open\u0027]", "Name": "Mister O\u0027s", "Open Hour": "[\u0027On Tuesday open : 1200 close 1900 open overnight : False\u0027, \u0027On Wednesday open : 1200 close 1900 open overnight : False\u0027, \u0027On Thursday open : 1200 close 1900 open overnight : False\u0027, \u0027On Friday open : 1200 close 1900 open overnight : False\u0027, \u0027On Saturday open : 1200 close 1900 open overnight : False\u0027]", "Saturday": "[\u00271200-1900\u0027]", "Sunday": "[\u0027not open\u0027]", "Thursday": "[\u00271200-1900\u0027]", "Tuesday": "[\u00271200-1900\u0027]", "Wednesday": "[\u00271200-1900\u0027]", "address": "11838 Ventura Blvd Studio City 91604", "famous_for": "The Mister O\u0027s Burger ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "4.0", "review number": "228", "sentiment_score_comment": "0.400", "sentiment_score_review": "0.800", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "55F", "weather": "Mostly Sunny", "webpage": "https://misterosla.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.2522854, 33.92925140000001], "type": "Point"}, "id": 16, "properties": {"Friday": "[\u00270800-2200\u0027]", "Monday": "[\u00270800-2200\u0027]", "Name": "Hawkins House of Burgers", "Open Hour": "[\u0027On Monday open : 0800 close 2200 open overnight : False\u0027, \u0027On Tuesday open : 0800 close 2200 open overnight : False\u0027, \u0027On Wednesday open : 0800 close 2200 open overnight : False\u0027, \u0027On Thursday open : 0800 close 2200 open overnight : False\u0027, \u0027On Friday open : 0800 close 2200 open overnight : False\u0027, \u0027On Saturday open : 0800 close 2200 open overnight : False\u0027, \u0027On Sunday open : 0800 close 2100 open overnight : False\u0027]", "Saturday": "[\u00270800-2200\u0027]", "Sunday": "[\u00270800-2100\u0027]", "Thursday": "[\u00270800-2200\u0027]", "Tuesday": "[\u00270800-2200\u0027]", "Wednesday": "[\u00270800-2200\u0027]", "address": "11603 S Slater St Los Angeles 90059", "famous_for": "Whipper Burger ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "4.5", "review number": "1421", "sentiment_score_comment": "0.600", "sentiment_score_review": "0.300", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "59F", "weather": "Mostly Sunny", "webpage": "http://www.hawkinsburgers.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.446936, 33.9603842], "type": "Point"}, "id": 17, "properties": {"Friday": "[\u00271100-0000\u0027]", "Monday": "[\u00271100-2200\u0027]", "Name": "the Tripel", "Open Hour": "[\u0027On Monday open : 1100 close 2200 open overnight : False\u0027, \u0027On Tuesday open : 1100 close 2200 open overnight : False\u0027, \u0027On Wednesday open : 1100 close 2200 open overnight : False\u0027, \u0027On Thursday open : 1100 close 2200 open overnight : False\u0027, \u0027On Friday open : 1100 close 0000 open overnight : False\u0027, \u0027On Saturday open : 1030 close 0000 open overnight : False\u0027, \u0027On Sunday open : 1030 close 2200 open overnight : False\u0027]", "Saturday": "[\u00271030-0000\u0027]", "Sunday": "[\u00271030-2200\u0027]", "Thursday": "[\u00271100-2200\u0027]", "Tuesday": "[\u00271100-2200\u0027]", "Wednesday": "[\u00271100-2200\u0027]", "address": "333 Culver Blvd Los Angeles 90293", "famous_for": "The Tripel Burger ", "highlight": {}, "rating_in_blog": "4", "rating_in_yelp": "4.0", "review number": "873", "sentiment_score_comment": "0.300", "sentiment_score_review": "0.5, ", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "57F", "weather": "Mostly Sunny", "webpage": "http://thetripel.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.2637628, 34.0528158], "type": "Point"}, "id": 18, "properties": {"Friday": "[\u00271130-2200\u0027]", "Monday": "[\u00271130-2100\u0027]", "Name": "Plan Check", "Open Hour": "[\u0027On Monday open : 1130 close 2100 open overnight : False\u0027, \u0027On Tuesday open : 1130 close 2100 open overnight : False\u0027, \u0027On Wednesday open : 1130 close 2100 open overnight : False\u0027, \u0027On Thursday open : 1130 close 2100 open overnight : False\u0027, \u0027On Friday open : 1130 close 2200 open overnight : False\u0027, \u0027On Saturday open : 1100 close 2200 open overnight : False\u0027, \u0027On Sunday open : 1100 close 2100 open overnight : False\u0027]", "Saturday": "[\u00271100-2200\u0027]", "Sunday": "[\u00271100-2100\u0027]", "Thursday": "[\u00271130-2100\u0027]", "Tuesday": "[\u00271130-2100\u0027]", "Wednesday": "[\u00271130-2100\u0027]", "address": "1111 Wilshire Blvd Los Angeles 90017", "famous_for": "Plan Check Burger (PCB) ", "highlight": {}, "rating_in_blog": "4", "rating_in_yelp": "4.0", "review number": "1185", "sentiment_score_comment": "0.5, ", "sentiment_score_review": "0.600", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "59F", "weather": "Mostly Sunny", "webpage": "http://www.plancheck.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.2567722, 34.0762828], "type": "Point"}, "id": 19, "properties": {"Friday": "[\u00271700-0200\u0027]", "Monday": "[\u00271700-0200\u0027]", "Name": "Lowboy", "Open Hour": "[\u0027On Monday open : 1700 close 0200 open overnight : True\u0027, \u0027On Tuesday open : 1700 close 0200 open overnight : True\u0027, \u0027On Wednesday open : 1700 close 0200 open overnight : True\u0027, \u0027On Thursday open : 1700 close 0200 open overnight : True\u0027, \u0027On Friday open : 1700 close 0200 open overnight : True\u0027, \u0027On Saturday open : 1200 close 0200 open overnight : True\u0027, \u0027On Sunday open : 1200 close 0200 open overnight : True\u0027]", "Saturday": "[\u00271200-0200\u0027]", "Sunday": "[\u00271200-0200\u0027]", "Thursday": "[\u00271700-0200\u0027]", "Tuesday": "[\u00271700-0200\u0027]", "Wednesday": "[\u00271700-0200\u0027]", "address": "1540 Sunset Blvd Los Angeles 90026", "famous_for": "The Lowboy ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "4.5", "review number": "85", "sentiment_score_comment": "0.899", "sentiment_score_review": "0.400", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "56F", "weather": "Mostly Sunny", "webpage": "https://lowboybar.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.1925562, 34.1101152], "type": "Point"}, "id": 20, "properties": {"Friday": "[\u00271200-2000\u0027]", "Monday": "[\u0027not open\u0027]", "Name": "Otono", "Open Hour": "[\u0027On Thursday open : 1200 close 2000 open overnight : False\u0027, \u0027On Friday open : 1200 close 2000 open overnight : False\u0027, \u0027On Saturday open : 1200 close 2000 open overnight : False\u0027, \u0027On Sunday open : 1200 close 2000 open overnight : False\u0027]", "Saturday": "[\u00271200-2000\u0027]", "Sunday": "[\u00271200-2000\u0027]", "Thursday": "[\u00271200-2000\u0027]", "Tuesday": "[\u0027not open\u0027]", "Wednesday": "[\u0027not open\u0027]", "address": "5715 N Figueroa St Los Angeles 90042", "famous_for": "Hamburguesa ", "highlight": {}, "rating_in_blog": "2", "rating_in_yelp": "4.0", "review number": "329", "sentiment_score_comment": "0.200", "sentiment_score_review": "0.200", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "56F", "weather": "Mostly Sunny", "webpage": "https://www.otonorestaurant.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.2487972, 34.05065], "type": "Point"}, "id": 21, "properties": {"Friday": "[\u00271100-2000\u0027]", "Monday": "[\u00271100-2000\u0027]", "Name": "Belcampo Meat Co.", "Open Hour": "[\u0027On Monday open : 1100 close 2000 open overnight : False\u0027, \u0027On Tuesday open : 1100 close 2000 open overnight : False\u0027, \u0027On Wednesday open : 1100 close 2000 open overnight : False\u0027, \u0027On Thursday open : 1100 close 2000 open overnight : False\u0027, \u0027On Friday open : 1100 close 2000 open overnight : False\u0027, \u0027On Saturday open : 1100 close 2000 open overnight : False\u0027, \u0027On Sunday open : 1100 close 2000 open overnight : False\u0027]", "Saturday": "[\u00271100-2000\u0027]", "Sunday": "[\u00271100-2000\u0027]", "Thursday": "[\u00271100-2000\u0027]", "Tuesday": "[\u00271100-2000\u0027]", "Wednesday": "[\u00271100-2000\u0027]", "address": "Grand Central Market 317 S Broadway Los Angeles 90013", "famous_for": "The Belcampo Burger ", "highlight": {}, "rating_in_blog": "4", "rating_in_yelp": "4.0", "review number": "514", "sentiment_score_comment": "0.800", "sentiment_score_review": "0.400", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "59F", "weather": "Mostly Sunny", "webpage": "http://www.belcampomeatco.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.1265681, 34.09566220000001], "type": "Point"}, "id": 22, "properties": {"Friday": "[\u00271100-2100\u0027]", "Monday": "[\u00271100-2100\u0027]", "Name": "Grill \u0027Em All", "Open Hour": "[\u0027On Monday open : 1100 close 2100 open overnight : False\u0027, \u0027On Tuesday open : 1100 close 2100 open overnight : False\u0027, \u0027On Wednesday open : 1100 close 2100 open overnight : False\u0027, \u0027On Thursday open : 1100 close 2100 open overnight : False\u0027, \u0027On Friday open : 1100 close 2100 open overnight : False\u0027, \u0027On Saturday open : 1100 close 2100 open overnight : False\u0027, \u0027On Sunday open : 1100 close 2100 open overnight : False\u0027]", "Saturday": "[\u00271100-2100\u0027]", "Sunday": "[\u00271100-2100\u0027]", "Thursday": "[\u00271100-2100\u0027]", "Tuesday": "[\u00271100-2100\u0027]", "Wednesday": "[\u00271100-2100\u0027]", "address": "19 E Main St Alhambra 91801", "famous_for": "Napalm Death ", "highlight": {}, "rating_in_blog": "5", "rating_in_yelp": "4.0", "review number": "2416", "sentiment_score_comment": "0.800", "sentiment_score_review": "-0.20", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "54F", "weather": "Mostly Sunny", "webpage": "http://grillemallburgs.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.23706090000002, 34.065216], "type": "Point"}, "id": 23, "properties": {"Friday": "[\u00271100-2200\u0027]", "Monday": "[\u0027not open\u0027]", "Name": "Burgerlords", "Open Hour": "[\u0027On Tuesday open : 1100 close 2200 open overnight : False\u0027, \u0027On Wednesday open : 1100 close 2200 open overnight : False\u0027, \u0027On Thursday open : 1100 close 2200 open overnight : False\u0027, \u0027On Friday open : 1100 close 2200 open overnight : False\u0027, \u0027On Saturday open : 1100 close 2200 open overnight : False\u0027, \u0027On Sunday open : 1100 close 2200 open overnight : False\u0027]", "Saturday": "[\u00271100-2200\u0027]", "Sunday": "[\u00271100-2200\u0027]", "Thursday": "[\u00271100-2200\u0027]", "Tuesday": "[\u00271100-2200\u0027]", "Wednesday": "[\u00271100-2200\u0027]", "address": "943 North Broadway #102 Los Angeles 90012", "famous_for": "Cheeseburger ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "4.0", "review number": "778", "sentiment_score_comment": "0.200", "sentiment_score_review": "0.400", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "59F", "weather": "Mostly Sunny", "webpage": "http://www.burgerlords.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.49135859999998, 34.0089422], "type": "Point"}, "id": 24, "properties": {"Friday": "[\u00271600-2300\u0027]", "Monday": "[\u00271600-2200\u0027]", "Name": "Herringbone Santa Monica", "Open Hour": "[\u0027On Monday open : 1600 close 2200 open overnight : False\u0027, \u0027On Tuesday open : 1600 close 2200 open overnight : False\u0027, \u0027On Wednesday open : 1600 close 2200 open overnight : False\u0027, \u0027On Thursday open : 1600 close 2200 open overnight : False\u0027, \u0027On Friday open : 1600 close 2300 open overnight : False\u0027, \u0027On Saturday open : 1000 close 2300 open overnight : False\u0027, \u0027On Sunday open : 1000 close 2100 open overnight : False\u0027]", "Saturday": "[\u00271000-2300\u0027]", "Sunday": "[\u00271000-2100\u0027]", "Thursday": "[\u00271600-2200\u0027]", "Tuesday": "[\u00271600-2200\u0027]", "Wednesday": "[\u00271600-2200\u0027]", "address": "1755 Ocean Ave Los Angeles", "famous_for": "Two-Hand Burger ", "highlight": {}, "rating_in_blog": "5", "rating_in_yelp": "4.0", "review number": "798", "sentiment_score_comment": "0.0, ", "sentiment_score_review": "0.5, ", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "57F", "weather": "Mostly Sunny", "webpage": "http://herringboneeats.com/santa-monica/ringboneeats.com"}, "type": "Feature"}], "type": "FeatureCollection"});
+        
+    
+        geo_json_4392490161f84228b93bd2599898d781.bindTooltip(
+            function(layer){
+            // Convert non-primitive to String.
+            let handleObject = (feature)=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+            let fields = ["Name", "famous_for", "webpage", "address", "rating_in_blog", "rating_in_yelp", "sentiment_score_review", "sentiment_score_comment", "weather", "temperature"];
+            return '<table>' +
+            String(
+                fields.map(
+                columnname=>
+                    `<tr style="text-align: left;">
+                    <th style="padding: 4px; padding-right: 10px;">
+                    ${ columnname.toLocaleString()}
+                    </th>
+                    
+                    <td style="padding: 4px;">${handleObject(layer.feature.properties[columnname])
+                    .toLocaleString()}</td></tr>`
+                ).join(''))
+                +'</table>'
+            }, {"sticky": true});
+        
+    
+        function geo_json_99f75cecab0e46509f20e8a9eb55bc78_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_83926591d9ce43c5a2ac8b72533ea84a.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_99f75cecab0e46509f20e8a9eb55bc78 = L.geoJson(null, {
+                onEachFeature: geo_json_99f75cecab0e46509f20e8a9eb55bc78_onEachFeature,
+            
+        });
+        function geo_json_99f75cecab0e46509f20e8a9eb55bc78_add (data) {
+            geo_json_99f75cecab0e46509f20e8a9eb55bc78.addData(data)
+                .addTo(map_83926591d9ce43c5a2ac8b72533ea84a);
+        }
+            geo_json_99f75cecab0e46509f20e8a9eb55bc78_add({"features": [{"geometry": {"coordinates": [-118.232515, 34.0344246], "type": "Point"}, "id": 0, "properties": {"Friday": "[\u00271130-0200\u0027]", "Monday": "[\u00271130-0200\u0027]", "Name": "Everson Royce Bar", "Open Hour": "[\u0027On Monday open : 1130 close 0200 open overnight : True\u0027, \u0027On Tuesday open : 1130 close 0200 open overnight : True\u0027, \u0027On Wednesday open : 1130 close 0200 open overnight : True\u0027, \u0027On Thursday open : 1130 close 0200 open overnight : True\u0027, \u0027On Friday open : 1130 close 0200 open overnight : True\u0027, \u0027On Saturday open : 1700 close 0200 open overnight : True\u0027, \u0027On Sunday open : 1400 close 0000 open overnight : False\u0027]", "Saturday": "[\u00271700-0200\u0027]", "Sunday": "[\u00271400-0000\u0027]", "Thursday": "[\u00271130-0200\u0027]", "Tuesday": "[\u00271130-0200\u0027]", "Wednesday": "[\u00271130-0200\u0027]", "address": "1936 E 7th St Los Angeles 90021", "famous_for": "Single Burger ", "highlight": {}, "rating_in_blog": "4", "rating_in_yelp": "4.5", "review number": "781", "sentiment_score_comment": "0.400", "sentiment_score_review": "0.400", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "61F", "weather": "Mostly Sunny", "webpage": "http://www.erbla.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.3381817, 34.0842081], "type": "Point"}, "id": 1, "properties": {"Friday": "[\u00271200-2300\u0027]", "Monday": "[\u00271200-2200\u0027]", "Name": "Petit Trois", "Open Hour": "[\u0027On Monday open : 1200 close 2200 open overnight : False\u0027, \u0027On Tuesday open : 1200 close 2200 open overnight : False\u0027, \u0027On Wednesday open : 1200 close 2200 open overnight : False\u0027, \u0027On Thursday open : 1200 close 2200 open overnight : False\u0027, \u0027On Friday open : 1200 close 2300 open overnight : False\u0027, \u0027On Saturday open : 1200 close 2300 open overnight : False\u0027, \u0027On Sunday open : 1200 close 2200 open overnight : False\u0027]", "Saturday": "[\u00271200-2300\u0027]", "Sunday": "[\u00271200-2200\u0027]", "Thursday": "[\u00271200-2200\u0027]", "Tuesday": "[\u00271200-2200\u0027]", "Wednesday": "[\u00271200-2200\u0027]", "address": "718 N Highland Ave Los Angeles 90038", "famous_for": "Big Mec ", "highlight": {}, "rating_in_blog": "5", "rating_in_yelp": "4.0", "review number": "847", "sentiment_score_comment": "0.200", "sentiment_score_review": "0.0, ", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "55F", "weather": "Mostly Sunny", "webpage": "http://petittrois.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.34342959999998, 34.0833655], "type": "Point"}, "id": 2, "properties": {"Friday": "[\u00271000-1900\u0027]", "Monday": "[\u00271000-1900\u0027]", "Name": "Standing\u0027s Butchery", "Open Hour": "[\u0027On Monday open : 1000 close 1900 open overnight : False\u0027, \u0027On Tuesday open : 1000 close 1900 open overnight : False\u0027, \u0027On Wednesday open : 1000 close 1900 open overnight : False\u0027, \u0027On Thursday open : 1000 close 1900 open overnight : False\u0027, \u0027On Friday open : 1000 close 1900 open overnight : False\u0027, \u0027On Saturday open : 0900 close 1700 open overnight : False\u0027, \u0027On Sunday open : 0900 close 1700 open overnight : False\u0027]", "Saturday": "[\u00270900-1700\u0027]", "Sunday": "[\u00270900-1700\u0027]", "Thursday": "[\u00271000-1900\u0027]", "Tuesday": "[\u00271000-1900\u0027]", "Wednesday": "[\u00271000-1900\u0027]", "address": "7016 Melrose Ave Los Angeles 90038", "famous_for": "Burgerdaddy ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "5.0", "review number": "77", "sentiment_score_comment": "0.699", "sentiment_score_review": "0.600", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "55F", "weather": "Mostly Sunny", "webpage": "http://standingsbutchery.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.3162573, 34.0601045], "type": "Point"}, "id": 3, "properties": {"Friday": "[\u00271030-0130\u0027]", "Monday": "[\u00271030-0100\u0027]", "Name": "In-N-Out Burger", "Open Hour": "[\u0027On Monday open : 1030 close 0100 open overnight : True\u0027, \u0027On Tuesday open : 1030 close 0100 open overnight : True\u0027, \u0027On Wednesday open : 1030 close 0100 open overnight : True\u0027, \u0027On Thursday open : 1030 close 0100 open overnight : True\u0027, \u0027On Friday open : 1030 close 0130 open overnight : True\u0027, \u0027On Saturday open : 1030 close 0130 open overnight : True\u0027, \u0027On Sunday open : 1030 close 0100 open overnight : True\u0027]", "Saturday": "[\u00271030-0130\u0027]", "Sunday": "[\u00271030-0100\u0027]", "Thursday": "[\u00271030-0100\u0027]", "Tuesday": "[\u00271030-0100\u0027]", "Wednesday": "[\u00271030-0100\u0027]", "address": "Various locations in LA Los Angeles", "famous_for": "Double-Double (Animal Style) ", "highlight": {}, "rating_in_blog": "5", "rating_in_yelp": "4.0", "review number": "1644", "sentiment_score_comment": "0.100", "sentiment_score_review": "0.300", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "56F", "weather": "Mostly Sunny", "webpage": "http://www.in-n-out.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.3672417, 34.091184000000005], "type": "Point"}, "id": 4, "properties": {"Friday": "[\u00271500-2000\u0027]", "Monday": "[\u0027not open\u0027]", "Name": "Connie and Ted\u0027s", "Open Hour": "[\u0027On Tuesday open : 1500 close 2000 open overnight : False\u0027, \u0027On Wednesday open : 1500 close 2000 open overnight : False\u0027, \u0027On Thursday open : 1500 close 2000 open overnight : False\u0027, \u0027On Friday open : 1500 close 2000 open overnight : False\u0027, \u0027On Saturday open : 1500 close 2000 open overnight : False\u0027]", "Saturday": "[\u00271500-2000\u0027]", "Sunday": "[\u0027not open\u0027]", "Thursday": "[\u00271500-2000\u0027]", "Tuesday": "[\u00271500-2000\u0027]", "Wednesday": "[\u00271500-2000\u0027]", "address": "8171 Santa Monica Blvd Los Angeles 90046", "famous_for": "The Hook Burger ", "highlight": {}, "rating_in_blog": "4", "rating_in_yelp": "4.0", "review number": "1880", "sentiment_score_comment": "0.400", "sentiment_score_review": "0.400", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "56F", "weather": "Mostly Sunny", "webpage": "http://www.connieandteds.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.2589207, 34.0998779], "type": "Point"}, "id": 5, "properties": {"Friday": "[\u0027not open\u0027]", "Monday": "[\u0027not open\u0027]", "Name": "Burgers Never Say Die", "Open Hour": "[\u0027On Sunday open : 1200 close 1930 open overnight : False\u0027]", "Saturday": "[\u0027not open\u0027]", "Sunday": "[\u00271200-1930\u0027]", "Thursday": "[\u0027not open\u0027]", "Tuesday": "[\u0027not open\u0027]", "Wednesday": "[\u0027not open\u0027]", "address": "2388 Glendale Blvd Los Angeles 90039", "famous_for": "Doubles ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "4.0", "review number": "501", "sentiment_score_comment": "0.800", "sentiment_score_review": "0.400", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "55F", "weather": "Mostly Sunny", "webpage": "http://www.burgersneversaydie.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.1314463, 34.1361523], "type": "Point"}, "id": 6, "properties": {"Friday": "[\u00270700-2200\u0027]", "Monday": "[\u00270700-2100\u0027]", "Name": "Pie \u0027n Burger", "Open Hour": "[\u0027On Monday open : 0700 close 2100 open overnight : False\u0027, \u0027On Tuesday open : 0700 close 2100 open overnight : False\u0027, \u0027On Wednesday open : 0700 close 2100 open overnight : False\u0027, \u0027On Thursday open : 0700 close 2100 open overnight : False\u0027, \u0027On Friday open : 0700 close 2200 open overnight : False\u0027, \u0027On Saturday open : 0700 close 2200 open overnight : False\u0027, \u0027On Sunday open : 0700 close 2100 open overnight : False\u0027]", "Saturday": "[\u00270700-2200\u0027]", "Sunday": "[\u00270700-2100\u0027]", "Thursday": "[\u00270700-2100\u0027]", "Tuesday": "[\u00270700-2100\u0027]", "Wednesday": "[\u00270700-2100\u0027]", "address": "913 E California Blvd Los Angeles 91106", "famous_for": "Singles ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "3.5", "review number": "1576", "sentiment_score_comment": "0.0, ", "sentiment_score_review": "0.300", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "53F", "weather": "Mostly Sunny", "webpage": "http://pienburger.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.3617507, 34.079227200000005], "type": "Point"}, "id": 7, "properties": {"Friday": "[\u00271800-2300\u0027]", "Monday": "[\u00271800-2200\u0027]", "Name": "Animal", "Open Hour": "[\u0027On Monday open : 1800 close 2200 open overnight : False\u0027, \u0027On Tuesday open : 1800 close 2200 open overnight : False\u0027, \u0027On Wednesday open : 1800 close 2200 open overnight : False\u0027, \u0027On Thursday open : 1800 close 2200 open overnight : False\u0027, \u0027On Friday open : 1800 close 2300 open overnight : False\u0027, \u0027On Saturday open : 1030 close 1430 open overnight : False\u0027, \u0027On Saturday open : 1800 close 2300 open overnight : False\u0027, \u0027On Sunday open : 1030 close 1430 open overnight : False\u0027, \u0027On Sunday open : 1800 close 2200 open overnight : False\u0027]", "Saturday": "[\u00271030-1430\u0027, \u00271800-2300\u0027]", "Sunday": "[\u00271030-1430\u0027, \u00271800-2200\u0027]", "Thursday": "[\u00271800-2200\u0027]", "Tuesday": "[\u00271800-2200\u0027]", "Wednesday": "[\u00271800-2200\u0027]", "address": "435 N Fairfax Ave Los Angeles 90036", "famous_for": "Boner Burger ", "highlight": {}, "rating_in_blog": "4", "rating_in_yelp": "4.0", "review number": "3372", "sentiment_score_comment": "0.400", "sentiment_score_review": "0.200", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "56F", "weather": "Mostly Sunny", "webpage": "http://www.animalrestaurant.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.4278502, 34.0406896], "type": "Point"}, "id": 8, "properties": {"Friday": "[\u00271100-2300\u0027]", "Monday": "[\u0027not open\u0027]", "Name": "the Apple Pan", "Open Hour": "[\u0027On Tuesday open : 1100 close 2100 open overnight : False\u0027, \u0027On Wednesday open : 1100 close 2100 open overnight : False\u0027, \u0027On Thursday open : 1100 close 2100 open overnight : False\u0027, \u0027On Friday open : 1100 close 2300 open overnight : False\u0027, \u0027On Saturday open : 1100 close 2300 open overnight : False\u0027, \u0027On Sunday open : 1100 close 2100 open overnight : False\u0027]", "Saturday": "[\u00271100-2300\u0027]", "Sunday": "[\u00271100-2100\u0027]", "Thursday": "[\u00271100-2100\u0027]", "Tuesday": "[\u00271100-2100\u0027]", "Wednesday": "[\u00271100-2100\u0027]", "address": "10801 W Pico Blvd Los Angeles 90064", "famous_for": "Hickory Burger ", "highlight": {}, "rating_in_blog": "4", "rating_in_yelp": "3.5", "review number": "2884", "sentiment_score_comment": "0.699", "sentiment_score_review": "0.200", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "57F", "weather": "Mostly Sunny", "webpage": "http://www.applepan.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.3005607, 34.0634255], "type": "Point"}, "id": 9, "properties": {"Friday": "[\u00271100-2100\u0027]", "Monday": "[\u00271100-2100\u0027]", "Name": "Cassell\u0027s Hamburgers", "Open Hour": "[\u0027On Monday open : 1100 close 2100 open overnight : False\u0027, \u0027On Tuesday open : 1100 close 2100 open overnight : False\u0027, \u0027On Wednesday open : 1100 close 2100 open overnight : False\u0027, \u0027On Thursday open : 1100 close 2100 open overnight : False\u0027, \u0027On Friday open : 1100 close 2100 open overnight : False\u0027, \u0027On Saturday open : 1100 close 2100 open overnight : False\u0027, \u0027On Sunday open : 1100 close 2100 open overnight : False\u0027]", "Saturday": "[\u00271100-2100\u0027]", "Sunday": "[\u00271100-2100\u0027]", "Thursday": "[\u00271100-2100\u0027]", "Tuesday": "[\u00271100-2100\u0027]", "Wednesday": "[\u00271100-2100\u0027]", "address": "3600 W 6th St Los Angeles 90020", "famous_for": "Patty Melt ", "highlight": {}, "rating_in_blog": "3", "rating_in_yelp": "4.0", "review number": "1581", "sentiment_score_comment": "0.5, ", "sentiment_score_review": "0.0, ", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "56F", "weather": "Mostly Sunny", "webpage": "http://www.cassellshamburgers.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.3530711, 34.0976531], "type": "Point"}, "id": 10, "properties": {"Friday": "[\u00271000-1500\u0027, \u00271615-0000\u0027]", "Monday": "[\u00271130-1500\u0027, \u00271615-2300\u0027]", "Name": "Electric Owl", "Open Hour": "[\u0027On Monday open : 1130 close 1500 open overnight : False\u0027, \u0027On Monday open : 1615 close 2300 open overnight : False\u0027, \u0027On Tuesday open : 1130 close 1500 open overnight : False\u0027, \u0027On Tuesday open : 1615 close 2300 open overnight : False\u0027, \u0027On Wednesday open : 1130 close 1500 open overnight : False\u0027, \u0027On Wednesday open : 1615 close 2300 open overnight : False\u0027, \u0027On Thursday open : 1130 close 1500 open overnight : False\u0027, \u0027On Thursday open : 1615 close 2300 open overnight : False\u0027, \u0027On Friday open : 1000 close 1500 open overnight : False\u0027, \u0027On Friday open : 1615 close 0000 open overnight : False\u0027, \u0027On Saturday open : 1000 close 0000 open overnight : False\u0027, \u0027On Sunday open : 1000 close 2300 open overnight : False\u0027]", "Saturday": "[\u00271000-0000\u0027]", "Sunday": "[\u00271000-2300\u0027]", "Thursday": "[\u00271130-1500\u0027, \u00271615-2300\u0027]", "Tuesday": "[\u00271130-1500\u0027, \u00271615-2300\u0027]", "Wednesday": "[\u00271130-1500\u0027, \u00271615-2300\u0027]", "address": "1451 N Gardner St West Hollywood 90046", "famous_for": "The Smash Burger ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "4.0", "review number": "383", "sentiment_score_comment": "0.0, ", "sentiment_score_review": "0.600", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "51F", "weather": "Mostly Sunny", "webpage": "http://www.electricowl.la"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.454532, 34.1792795], "type": "Point"}, "id": 11, "properties": {"Friday": "[\u00270900-1600\u0027]", "Monday": "[\u0027not open\u0027]", "Name": "Bill\u0027s Hamburgers", "Open Hour": "[\u0027On Tuesday open : 0830 close 1600 open overnight : False\u0027, \u0027On Wednesday open : 0830 close 1600 open overnight : False\u0027, \u0027On Thursday open : 0830 close 1600 open overnight : False\u0027, \u0027On Friday open : 0900 close 1600 open overnight : False\u0027]", "Saturday": "[\u0027not open\u0027]", "Sunday": "[\u0027not open\u0027]", "Thursday": "[\u00270830-1600\u0027]", "Tuesday": "[\u00270830-1600\u0027]", "Wednesday": "[\u00270830-1600\u0027]", "address": "14742 Oxnard St Los Angeles 91411", "famous_for": "Bacon Cheeseburger ", "highlight": {}, "rating_in_blog": "5", "rating_in_yelp": "4.5", "review number": "703", "sentiment_score_comment": "0.0, ", "sentiment_score_review": "0.300", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "56F", "weather": "Mostly Sunny", "webpage": "no_website"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.4984232, 34.0293315], "type": "Point"}, "id": 12, "properties": {"Friday": "[\u00271200-0100\u0027]", "Monday": "[\u00271700-0000\u0027]", "Name": "Father\u0027s Office", "Open Hour": "[\u0027On Monday open : 1700 close 0000 open overnight : False\u0027, \u0027On Tuesday open : 1700 close 0000 open overnight : False\u0027, \u0027On Wednesday open : 1700 close 0000 open overnight : False\u0027, \u0027On Thursday open : 1700 close 0000 open overnight : False\u0027, \u0027On Friday open : 1200 close 0100 open overnight : True\u0027, \u0027On Saturday open : 1200 close 0100 open overnight : True\u0027, \u0027On Sunday open : 1200 close 2300 open overnight : False\u0027]", "Saturday": "[\u00271200-0100\u0027]", "Sunday": "[\u00271200-2300\u0027]", "Thursday": "[\u00271700-0000\u0027]", "Tuesday": "[\u00271700-0000\u0027]", "Wednesday": "[\u00271700-0000\u0027]", "address": "1018 Montana Ave Los Angeles 90403", "famous_for": "Office Burger ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "3.5", "review number": "6023", "sentiment_score_comment": "-0.20", "sentiment_score_review": "0.100", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "57F", "weather": "Mostly Sunny", "webpage": "http://www.fathersoffice.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.4982155, 34.0155888], "type": "Point"}, "id": 13, "properties": {"Friday": "[\u00271130-2200\u0027]", "Monday": "[\u00271130-2200\u0027]", "Name": "HiHo Cheeseburger", "Open Hour": "[\u0027On Monday open : 1130 close 2200 open overnight : False\u0027, \u0027On Tuesday open : 1130 close 2200 open overnight : False\u0027, \u0027On Wednesday open : 1130 close 2200 open overnight : False\u0027, \u0027On Thursday open : 1130 close 2200 open overnight : False\u0027, \u0027On Friday open : 1130 close 2200 open overnight : False\u0027, \u0027On Saturday open : 1130 close 2200 open overnight : False\u0027, \u0027On Sunday open : 1130 close 2200 open overnight : False\u0027]", "Saturday": "[\u00271130-2200\u0027]", "Sunday": "[\u00271130-2200\u0027]", "Thursday": "[\u00271130-2200\u0027]", "Tuesday": "[\u00271130-2200\u0027]", "Wednesday": "[\u00271130-2200\u0027]", "address": "1320 2nd St Santa Monica 90401", "famous_for": "Double HiHo ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "4.0", "review number": "116", "sentiment_score_comment": "0.300", "sentiment_score_review": "0.300", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "57F", "weather": "Mostly Sunny", "webpage": "https://www.hiho.la"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.210492, 34.1395542], "type": "Point"}, "id": 14, "properties": {"Friday": "[\u00271100-2200\u0027]", "Monday": "[\u00271100-2200\u0027]", "Name": "Oinkster", "Open Hour": "[\u0027On Monday open : 1100 close 2200 open overnight : False\u0027, \u0027On Tuesday open : 1100 close 2200 open overnight : False\u0027, \u0027On Wednesday open : 1100 close 2200 open overnight : False\u0027, \u0027On Thursday open : 1100 close 2200 open overnight : False\u0027, \u0027On Friday open : 1100 close 2200 open overnight : False\u0027, \u0027On Saturday open : 1100 close 2200 open overnight : False\u0027, \u0027On Sunday open : 1100 close 2200 open overnight : False\u0027]", "Saturday": "[\u00271100-2200\u0027]", "Sunday": "[\u00271100-2200\u0027]", "Thursday": "[\u00271100-2200\u0027]", "Tuesday": "[\u00271100-2200\u0027]", "Wednesday": "[\u00271100-2200\u0027]", "address": "2005 Colorado Blvd Los Angeles 90041", "famous_for": "The Royale ", "highlight": {}, "rating_in_blog": "4", "rating_in_yelp": "4.0", "review number": "3608", "sentiment_score_comment": "0.800", "sentiment_score_review": "0.400", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "53F", "weather": "Mostly Sunny", "webpage": "http://www.theoinkster.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.3905505, 34.1422729], "type": "Point"}, "id": 15, "properties": {"Friday": "[\u00271200-1900\u0027]", "Monday": "[\u0027not open\u0027]", "Name": "Mister O\u0027s", "Open Hour": "[\u0027On Tuesday open : 1200 close 1900 open overnight : False\u0027, \u0027On Wednesday open : 1200 close 1900 open overnight : False\u0027, \u0027On Thursday open : 1200 close 1900 open overnight : False\u0027, \u0027On Friday open : 1200 close 1900 open overnight : False\u0027, \u0027On Saturday open : 1200 close 1900 open overnight : False\u0027]", "Saturday": "[\u00271200-1900\u0027]", "Sunday": "[\u0027not open\u0027]", "Thursday": "[\u00271200-1900\u0027]", "Tuesday": "[\u00271200-1900\u0027]", "Wednesday": "[\u00271200-1900\u0027]", "address": "11838 Ventura Blvd Studio City 91604", "famous_for": "The Mister O\u0027s Burger ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "4.0", "review number": "228", "sentiment_score_comment": "0.400", "sentiment_score_review": "0.800", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "55F", "weather": "Mostly Sunny", "webpage": "https://misterosla.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.2522854, 33.92925140000001], "type": "Point"}, "id": 16, "properties": {"Friday": "[\u00270800-2200\u0027]", "Monday": "[\u00270800-2200\u0027]", "Name": "Hawkins House of Burgers", "Open Hour": "[\u0027On Monday open : 0800 close 2200 open overnight : False\u0027, \u0027On Tuesday open : 0800 close 2200 open overnight : False\u0027, \u0027On Wednesday open : 0800 close 2200 open overnight : False\u0027, \u0027On Thursday open : 0800 close 2200 open overnight : False\u0027, \u0027On Friday open : 0800 close 2200 open overnight : False\u0027, \u0027On Saturday open : 0800 close 2200 open overnight : False\u0027, \u0027On Sunday open : 0800 close 2100 open overnight : False\u0027]", "Saturday": "[\u00270800-2200\u0027]", "Sunday": "[\u00270800-2100\u0027]", "Thursday": "[\u00270800-2200\u0027]", "Tuesday": "[\u00270800-2200\u0027]", "Wednesday": "[\u00270800-2200\u0027]", "address": "11603 S Slater St Los Angeles 90059", "famous_for": "Whipper Burger ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "4.5", "review number": "1421", "sentiment_score_comment": "0.600", "sentiment_score_review": "0.300", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "59F", "weather": "Mostly Sunny", "webpage": "http://www.hawkinsburgers.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.446936, 33.9603842], "type": "Point"}, "id": 17, "properties": {"Friday": "[\u00271100-0000\u0027]", "Monday": "[\u00271100-2200\u0027]", "Name": "the Tripel", "Open Hour": "[\u0027On Monday open : 1100 close 2200 open overnight : False\u0027, \u0027On Tuesday open : 1100 close 2200 open overnight : False\u0027, \u0027On Wednesday open : 1100 close 2200 open overnight : False\u0027, \u0027On Thursday open : 1100 close 2200 open overnight : False\u0027, \u0027On Friday open : 1100 close 0000 open overnight : False\u0027, \u0027On Saturday open : 1030 close 0000 open overnight : False\u0027, \u0027On Sunday open : 1030 close 2200 open overnight : False\u0027]", "Saturday": "[\u00271030-0000\u0027]", "Sunday": "[\u00271030-2200\u0027]", "Thursday": "[\u00271100-2200\u0027]", "Tuesday": "[\u00271100-2200\u0027]", "Wednesday": "[\u00271100-2200\u0027]", "address": "333 Culver Blvd Los Angeles 90293", "famous_for": "The Tripel Burger ", "highlight": {}, "rating_in_blog": "4", "rating_in_yelp": "4.0", "review number": "873", "sentiment_score_comment": "0.300", "sentiment_score_review": "0.5, ", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "57F", "weather": "Mostly Sunny", "webpage": "http://thetripel.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.2637628, 34.0528158], "type": "Point"}, "id": 18, "properties": {"Friday": "[\u00271130-2200\u0027]", "Monday": "[\u00271130-2100\u0027]", "Name": "Plan Check", "Open Hour": "[\u0027On Monday open : 1130 close 2100 open overnight : False\u0027, \u0027On Tuesday open : 1130 close 2100 open overnight : False\u0027, \u0027On Wednesday open : 1130 close 2100 open overnight : False\u0027, \u0027On Thursday open : 1130 close 2100 open overnight : False\u0027, \u0027On Friday open : 1130 close 2200 open overnight : False\u0027, \u0027On Saturday open : 1100 close 2200 open overnight : False\u0027, \u0027On Sunday open : 1100 close 2100 open overnight : False\u0027]", "Saturday": "[\u00271100-2200\u0027]", "Sunday": "[\u00271100-2100\u0027]", "Thursday": "[\u00271130-2100\u0027]", "Tuesday": "[\u00271130-2100\u0027]", "Wednesday": "[\u00271130-2100\u0027]", "address": "1111 Wilshire Blvd Los Angeles 90017", "famous_for": "Plan Check Burger (PCB) ", "highlight": {}, "rating_in_blog": "4", "rating_in_yelp": "4.0", "review number": "1185", "sentiment_score_comment": "0.5, ", "sentiment_score_review": "0.600", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "59F", "weather": "Mostly Sunny", "webpage": "http://www.plancheck.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.2567722, 34.0762828], "type": "Point"}, "id": 19, "properties": {"Friday": "[\u00271700-0200\u0027]", "Monday": "[\u00271700-0200\u0027]", "Name": "Lowboy", "Open Hour": "[\u0027On Monday open : 1700 close 0200 open overnight : True\u0027, \u0027On Tuesday open : 1700 close 0200 open overnight : True\u0027, \u0027On Wednesday open : 1700 close 0200 open overnight : True\u0027, \u0027On Thursday open : 1700 close 0200 open overnight : True\u0027, \u0027On Friday open : 1700 close 0200 open overnight : True\u0027, \u0027On Saturday open : 1200 close 0200 open overnight : True\u0027, \u0027On Sunday open : 1200 close 0200 open overnight : True\u0027]", "Saturday": "[\u00271200-0200\u0027]", "Sunday": "[\u00271200-0200\u0027]", "Thursday": "[\u00271700-0200\u0027]", "Tuesday": "[\u00271700-0200\u0027]", "Wednesday": "[\u00271700-0200\u0027]", "address": "1540 Sunset Blvd Los Angeles 90026", "famous_for": "The Lowboy ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "4.5", "review number": "85", "sentiment_score_comment": "0.899", "sentiment_score_review": "0.400", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "56F", "weather": "Mostly Sunny", "webpage": "https://lowboybar.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.1925562, 34.1101152], "type": "Point"}, "id": 20, "properties": {"Friday": "[\u00271200-2000\u0027]", "Monday": "[\u0027not open\u0027]", "Name": "Otono", "Open Hour": "[\u0027On Thursday open : 1200 close 2000 open overnight : False\u0027, \u0027On Friday open : 1200 close 2000 open overnight : False\u0027, \u0027On Saturday open : 1200 close 2000 open overnight : False\u0027, \u0027On Sunday open : 1200 close 2000 open overnight : False\u0027]", "Saturday": "[\u00271200-2000\u0027]", "Sunday": "[\u00271200-2000\u0027]", "Thursday": "[\u00271200-2000\u0027]", "Tuesday": "[\u0027not open\u0027]", "Wednesday": "[\u0027not open\u0027]", "address": "5715 N Figueroa St Los Angeles 90042", "famous_for": "Hamburguesa ", "highlight": {}, "rating_in_blog": "2", "rating_in_yelp": "4.0", "review number": "329", "sentiment_score_comment": "0.200", "sentiment_score_review": "0.200", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "56F", "weather": "Mostly Sunny", "webpage": "https://www.otonorestaurant.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.2487972, 34.05065], "type": "Point"}, "id": 21, "properties": {"Friday": "[\u00271100-2000\u0027]", "Monday": "[\u00271100-2000\u0027]", "Name": "Belcampo Meat Co.", "Open Hour": "[\u0027On Monday open : 1100 close 2000 open overnight : False\u0027, \u0027On Tuesday open : 1100 close 2000 open overnight : False\u0027, \u0027On Wednesday open : 1100 close 2000 open overnight : False\u0027, \u0027On Thursday open : 1100 close 2000 open overnight : False\u0027, \u0027On Friday open : 1100 close 2000 open overnight : False\u0027, \u0027On Saturday open : 1100 close 2000 open overnight : False\u0027, \u0027On Sunday open : 1100 close 2000 open overnight : False\u0027]", "Saturday": "[\u00271100-2000\u0027]", "Sunday": "[\u00271100-2000\u0027]", "Thursday": "[\u00271100-2000\u0027]", "Tuesday": "[\u00271100-2000\u0027]", "Wednesday": "[\u00271100-2000\u0027]", "address": "Grand Central Market 317 S Broadway Los Angeles 90013", "famous_for": "The Belcampo Burger ", "highlight": {}, "rating_in_blog": "4", "rating_in_yelp": "4.0", "review number": "514", "sentiment_score_comment": "0.800", "sentiment_score_review": "0.400", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "59F", "weather": "Mostly Sunny", "webpage": "http://www.belcampomeatco.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.1265681, 34.09566220000001], "type": "Point"}, "id": 22, "properties": {"Friday": "[\u00271100-2100\u0027]", "Monday": "[\u00271100-2100\u0027]", "Name": "Grill \u0027Em All", "Open Hour": "[\u0027On Monday open : 1100 close 2100 open overnight : False\u0027, \u0027On Tuesday open : 1100 close 2100 open overnight : False\u0027, \u0027On Wednesday open : 1100 close 2100 open overnight : False\u0027, \u0027On Thursday open : 1100 close 2100 open overnight : False\u0027, \u0027On Friday open : 1100 close 2100 open overnight : False\u0027, \u0027On Saturday open : 1100 close 2100 open overnight : False\u0027, \u0027On Sunday open : 1100 close 2100 open overnight : False\u0027]", "Saturday": "[\u00271100-2100\u0027]", "Sunday": "[\u00271100-2100\u0027]", "Thursday": "[\u00271100-2100\u0027]", "Tuesday": "[\u00271100-2100\u0027]", "Wednesday": "[\u00271100-2100\u0027]", "address": "19 E Main St Alhambra 91801", "famous_for": "Napalm Death ", "highlight": {}, "rating_in_blog": "5", "rating_in_yelp": "4.0", "review number": "2416", "sentiment_score_comment": "0.800", "sentiment_score_review": "-0.20", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "54F", "weather": "Mostly Sunny", "webpage": "http://grillemallburgs.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.23706090000002, 34.065216], "type": "Point"}, "id": 23, "properties": {"Friday": "[\u00271100-2200\u0027]", "Monday": "[\u0027not open\u0027]", "Name": "Burgerlords", "Open Hour": "[\u0027On Tuesday open : 1100 close 2200 open overnight : False\u0027, \u0027On Wednesday open : 1100 close 2200 open overnight : False\u0027, \u0027On Thursday open : 1100 close 2200 open overnight : False\u0027, \u0027On Friday open : 1100 close 2200 open overnight : False\u0027, \u0027On Saturday open : 1100 close 2200 open overnight : False\u0027, \u0027On Sunday open : 1100 close 2200 open overnight : False\u0027]", "Saturday": "[\u00271100-2200\u0027]", "Sunday": "[\u00271100-2200\u0027]", "Thursday": "[\u00271100-2200\u0027]", "Tuesday": "[\u00271100-2200\u0027]", "Wednesday": "[\u00271100-2200\u0027]", "address": "943 North Broadway #102 Los Angeles 90012", "famous_for": "Cheeseburger ", "highlight": {}, "rating_in_blog": "no rating", "rating_in_yelp": "4.0", "review number": "778", "sentiment_score_comment": "0.200", "sentiment_score_review": "0.400", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "59F", "weather": "Mostly Sunny", "webpage": "http://www.burgerlords.com"}, "type": "Feature"}, {"geometry": {"coordinates": [-118.49135859999998, 34.0089422], "type": "Point"}, "id": 24, "properties": {"Friday": "[\u00271600-2300\u0027]", "Monday": "[\u00271600-2200\u0027]", "Name": "Herringbone Santa Monica", "Open Hour": "[\u0027On Monday open : 1600 close 2200 open overnight : False\u0027, \u0027On Tuesday open : 1600 close 2200 open overnight : False\u0027, \u0027On Wednesday open : 1600 close 2200 open overnight : False\u0027, \u0027On Thursday open : 1600 close 2200 open overnight : False\u0027, \u0027On Friday open : 1600 close 2300 open overnight : False\u0027, \u0027On Saturday open : 1000 close 2300 open overnight : False\u0027, \u0027On Sunday open : 1000 close 2100 open overnight : False\u0027]", "Saturday": "[\u00271000-2300\u0027]", "Sunday": "[\u00271000-2100\u0027]", "Thursday": "[\u00271600-2200\u0027]", "Tuesday": "[\u00271600-2200\u0027]", "Wednesday": "[\u00271600-2200\u0027]", "address": "1755 Ocean Ave Los Angeles", "famous_for": "Two-Hand Burger ", "highlight": {}, "rating_in_blog": "5", "rating_in_yelp": "4.0", "review number": "798", "sentiment_score_comment": "0.0, ", "sentiment_score_review": "0.5, ", "style": {"color": "#00000000", "markerColor": "#00000000"}, "temperature": "57F", "weather": "Mostly Sunny", "webpage": "http://herringboneeats.com/santa-monica/ringboneeats.com"}, "type": "Feature"}], "type": "FeatureCollection"});
+        
+    
+        geo_json_99f75cecab0e46509f20e8a9eb55bc78.bindTooltip(
+            function(layer){
+            // Convert non-primitive to String.
+            let handleObject = (feature)=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+            let fields = ["Name", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+            return '<table>' +
+            String(
+                fields.map(
+                columnname=>
+                    `<tr style="text-align: left;">
+                    <th style="padding: 4px; padding-right: 10px;">
+                    ${ columnname.toLocaleString()}
+                    </th>
+                    
+                    <td style="padding: 4px;">${handleObject(layer.feature.properties[columnname])
+                    .toLocaleString()}</td></tr>`
+                ).join(''))
+                +'</table>'
+            }, {"sticky": true});
+        
+    
+            var marker_cluster_6c7956c2225b4cdd95485fcabc087bfd = L.markerClusterGroup(
+                {}
+            );
+            map_83926591d9ce43c5a2ac8b72533ea84a.addLayer(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+            var marker_fea5f8915511499eaa0620358023f3cd = L.marker(
+                [34.0344246, -118.232515],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_1d67711429dc4700ad32e1d6d9120da8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_34b338ef73c54c37a4c9a963e5690abb = $(`<div id="html_34b338ef73c54c37a4c9a963e5690abb" style="width: 100.0%; height: 100.0%;">Everson Royce Bar</div>`)[0];
+            popup_1d67711429dc4700ad32e1d6d9120da8.setContent(html_34b338ef73c54c37a4c9a963e5690abb);
+        
+
+        marker_fea5f8915511499eaa0620358023f3cd.bindPopup(popup_1d67711429dc4700ad32e1d6d9120da8)
+        ;
+
+        
+    
+    
+            var marker_3cbb9393139048d68be32004ec524003 = L.marker(
+                [34.0842081, -118.3381817],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_2c70d2f27685492b90feef76e0385650 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ce223dc542d840be8c92f14ad37dd483 = $(`<div id="html_ce223dc542d840be8c92f14ad37dd483" style="width: 100.0%; height: 100.0%;">Petit Trois</div>`)[0];
+            popup_2c70d2f27685492b90feef76e0385650.setContent(html_ce223dc542d840be8c92f14ad37dd483);
+        
+
+        marker_3cbb9393139048d68be32004ec524003.bindPopup(popup_2c70d2f27685492b90feef76e0385650)
+        ;
+
+        
+    
+    
+            var marker_db4a0f3507324aee98e905eb43a86dd3 = L.marker(
+                [34.0833655, -118.34342959999998],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_0e870f68e42e4fd2a250c616c22d208f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1d629751f3e640fe8e3ef09c8e1e2c2f = $(`<div id="html_1d629751f3e640fe8e3ef09c8e1e2c2f" style="width: 100.0%; height: 100.0%;">Standing's Butchery</div>`)[0];
+            popup_0e870f68e42e4fd2a250c616c22d208f.setContent(html_1d629751f3e640fe8e3ef09c8e1e2c2f);
+        
+
+        marker_db4a0f3507324aee98e905eb43a86dd3.bindPopup(popup_0e870f68e42e4fd2a250c616c22d208f)
+        ;
+
+        
+    
+    
+            var marker_6f981d277b7e45bcb855cdc16b5cb620 = L.marker(
+                [34.0601045, -118.3162573],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_c9d6f226ad8b434a9d4f26f4cccc9ed5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_95656bbdb682480ba89924b3bda0fdd4 = $(`<div id="html_95656bbdb682480ba89924b3bda0fdd4" style="width: 100.0%; height: 100.0%;">In-N-Out Burger</div>`)[0];
+            popup_c9d6f226ad8b434a9d4f26f4cccc9ed5.setContent(html_95656bbdb682480ba89924b3bda0fdd4);
+        
+
+        marker_6f981d277b7e45bcb855cdc16b5cb620.bindPopup(popup_c9d6f226ad8b434a9d4f26f4cccc9ed5)
+        ;
+
+        
+    
+    
+            var marker_b4d99823e54a4fd18f5e76cd04a14fe4 = L.marker(
+                [34.091184000000005, -118.3672417],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_2e06aefbf7dd43dda30a8c634e3d097a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f769353a90494d47b5f60884fc46c0e6 = $(`<div id="html_f769353a90494d47b5f60884fc46c0e6" style="width: 100.0%; height: 100.0%;">Connie and Ted's</div>`)[0];
+            popup_2e06aefbf7dd43dda30a8c634e3d097a.setContent(html_f769353a90494d47b5f60884fc46c0e6);
+        
+
+        marker_b4d99823e54a4fd18f5e76cd04a14fe4.bindPopup(popup_2e06aefbf7dd43dda30a8c634e3d097a)
+        ;
+
+        
+    
+    
+            var marker_96468217fc4d4f558b413c000a574479 = L.marker(
+                [34.0998779, -118.2589207],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_38e4adcd6d0d4651b5966b667881ee2b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2d9b9ade847c46ab99c235f10f1578cc = $(`<div id="html_2d9b9ade847c46ab99c235f10f1578cc" style="width: 100.0%; height: 100.0%;">Burgers Never Say Die</div>`)[0];
+            popup_38e4adcd6d0d4651b5966b667881ee2b.setContent(html_2d9b9ade847c46ab99c235f10f1578cc);
+        
+
+        marker_96468217fc4d4f558b413c000a574479.bindPopup(popup_38e4adcd6d0d4651b5966b667881ee2b)
+        ;
+
+        
+    
+    
+            var marker_0a86dc9094e1488794590b0a82523d5b = L.marker(
+                [34.1361523, -118.1314463],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_8790e8381bb6420b8c0f98751fb2a2b0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bb291ce1d936493380e6144835745383 = $(`<div id="html_bb291ce1d936493380e6144835745383" style="width: 100.0%; height: 100.0%;">Pie 'n Burger</div>`)[0];
+            popup_8790e8381bb6420b8c0f98751fb2a2b0.setContent(html_bb291ce1d936493380e6144835745383);
+        
+
+        marker_0a86dc9094e1488794590b0a82523d5b.bindPopup(popup_8790e8381bb6420b8c0f98751fb2a2b0)
+        ;
+
+        
+    
+    
+            var marker_e139ac9d48e54043ba11579a188e062e = L.marker(
+                [34.079227200000005, -118.3617507],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_b3eb837b57614221948125dc949762b6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_84da05e95987496aa8c16a89fcab27d7 = $(`<div id="html_84da05e95987496aa8c16a89fcab27d7" style="width: 100.0%; height: 100.0%;">Animal</div>`)[0];
+            popup_b3eb837b57614221948125dc949762b6.setContent(html_84da05e95987496aa8c16a89fcab27d7);
+        
+
+        marker_e139ac9d48e54043ba11579a188e062e.bindPopup(popup_b3eb837b57614221948125dc949762b6)
+        ;
+
+        
+    
+    
+            var marker_3fb9f08aee8a4cd48764ffba9704e3b6 = L.marker(
+                [34.0406896, -118.4278502],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_4a80a8dcfdcc43e29153f173f11c4f90 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_23d0e48d8a0549e1801bb3b0e5cc02aa = $(`<div id="html_23d0e48d8a0549e1801bb3b0e5cc02aa" style="width: 100.0%; height: 100.0%;">the Apple Pan</div>`)[0];
+            popup_4a80a8dcfdcc43e29153f173f11c4f90.setContent(html_23d0e48d8a0549e1801bb3b0e5cc02aa);
+        
+
+        marker_3fb9f08aee8a4cd48764ffba9704e3b6.bindPopup(popup_4a80a8dcfdcc43e29153f173f11c4f90)
+        ;
+
+        
+    
+    
+            var marker_df0c3d85250c4670b803bc9f41144cf7 = L.marker(
+                [34.0634255, -118.3005607],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_ac48647ba88842dc8a4e7e0d20e670f8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_24f59e75904b4291a595502bd67149c5 = $(`<div id="html_24f59e75904b4291a595502bd67149c5" style="width: 100.0%; height: 100.0%;">Cassell's Hamburgers</div>`)[0];
+            popup_ac48647ba88842dc8a4e7e0d20e670f8.setContent(html_24f59e75904b4291a595502bd67149c5);
+        
+
+        marker_df0c3d85250c4670b803bc9f41144cf7.bindPopup(popup_ac48647ba88842dc8a4e7e0d20e670f8)
+        ;
+
+        
+    
+    
+            var marker_dd71df324bd1476ebd8a2100a19259c5 = L.marker(
+                [34.0976531, -118.3530711],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_ab5a3ed722fc4917ab735f69fd8adc15 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f272b062a6c34a7897c67d1046a115d3 = $(`<div id="html_f272b062a6c34a7897c67d1046a115d3" style="width: 100.0%; height: 100.0%;">Electric Owl</div>`)[0];
+            popup_ab5a3ed722fc4917ab735f69fd8adc15.setContent(html_f272b062a6c34a7897c67d1046a115d3);
+        
+
+        marker_dd71df324bd1476ebd8a2100a19259c5.bindPopup(popup_ab5a3ed722fc4917ab735f69fd8adc15)
+        ;
+
+        
+    
+    
+            var marker_9e1c90afc1ec4bc4a887b9d3e13cadd5 = L.marker(
+                [34.1792795, -118.454532],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_5ff3d22a001148728fe56fe5024f34fb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f954395b8d634b2a930d25153f5b1f6d = $(`<div id="html_f954395b8d634b2a930d25153f5b1f6d" style="width: 100.0%; height: 100.0%;">Bill's Hamburgers</div>`)[0];
+            popup_5ff3d22a001148728fe56fe5024f34fb.setContent(html_f954395b8d634b2a930d25153f5b1f6d);
+        
+
+        marker_9e1c90afc1ec4bc4a887b9d3e13cadd5.bindPopup(popup_5ff3d22a001148728fe56fe5024f34fb)
+        ;
+
+        
+    
+    
+            var marker_ea0bf6fd6a754de29d2dbf346431507b = L.marker(
+                [34.0293315, -118.4984232],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_b12398bf1f6d4b35ae6544bc17c4672a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_94d1c1cf2bb74e149c5704646b7318e0 = $(`<div id="html_94d1c1cf2bb74e149c5704646b7318e0" style="width: 100.0%; height: 100.0%;">Father's Office</div>`)[0];
+            popup_b12398bf1f6d4b35ae6544bc17c4672a.setContent(html_94d1c1cf2bb74e149c5704646b7318e0);
+        
+
+        marker_ea0bf6fd6a754de29d2dbf346431507b.bindPopup(popup_b12398bf1f6d4b35ae6544bc17c4672a)
+        ;
+
+        
+    
+    
+            var marker_c4c5b0e9ea944953a62660c6fa787003 = L.marker(
+                [34.0155888, -118.4982155],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_7bbc5f55d35646369929b30a9669918e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cfecc8f78494427a910cc93560cf25bb = $(`<div id="html_cfecc8f78494427a910cc93560cf25bb" style="width: 100.0%; height: 100.0%;">HiHo Cheeseburger</div>`)[0];
+            popup_7bbc5f55d35646369929b30a9669918e.setContent(html_cfecc8f78494427a910cc93560cf25bb);
+        
+
+        marker_c4c5b0e9ea944953a62660c6fa787003.bindPopup(popup_7bbc5f55d35646369929b30a9669918e)
+        ;
+
+        
+    
+    
+            var marker_2bd31bc51a3e4ef48b6db7d49ba673d9 = L.marker(
+                [34.1395542, -118.210492],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_eabc0cea7c9c4d95af8fb06e07f823d3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cf9316f4e90940be9971aa4f65f0a684 = $(`<div id="html_cf9316f4e90940be9971aa4f65f0a684" style="width: 100.0%; height: 100.0%;">Oinkster</div>`)[0];
+            popup_eabc0cea7c9c4d95af8fb06e07f823d3.setContent(html_cf9316f4e90940be9971aa4f65f0a684);
+        
+
+        marker_2bd31bc51a3e4ef48b6db7d49ba673d9.bindPopup(popup_eabc0cea7c9c4d95af8fb06e07f823d3)
+        ;
+
+        
+    
+    
+            var marker_1c64d79dccf44aa08d2ddbc6744e7eab = L.marker(
+                [34.1422729, -118.3905505],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_fc24ef7e4d864c0b9e5f9dbb0b204107 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_466c364615df440eb6bca90ef407f2d8 = $(`<div id="html_466c364615df440eb6bca90ef407f2d8" style="width: 100.0%; height: 100.0%;">Mister O's</div>`)[0];
+            popup_fc24ef7e4d864c0b9e5f9dbb0b204107.setContent(html_466c364615df440eb6bca90ef407f2d8);
+        
+
+        marker_1c64d79dccf44aa08d2ddbc6744e7eab.bindPopup(popup_fc24ef7e4d864c0b9e5f9dbb0b204107)
+        ;
+
+        
+    
+    
+            var marker_6f857d6e75c640fa8398fba127513cd2 = L.marker(
+                [33.92925140000001, -118.2522854],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_f5404e952f59487b8ce8dbb9764def70 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_50d49ef8a76f425b9e313b9896648b7c = $(`<div id="html_50d49ef8a76f425b9e313b9896648b7c" style="width: 100.0%; height: 100.0%;">Hawkins House of Burgers</div>`)[0];
+            popup_f5404e952f59487b8ce8dbb9764def70.setContent(html_50d49ef8a76f425b9e313b9896648b7c);
+        
+
+        marker_6f857d6e75c640fa8398fba127513cd2.bindPopup(popup_f5404e952f59487b8ce8dbb9764def70)
+        ;
+
+        
+    
+    
+            var marker_5b85c2a9900843bfbb07239881c4e6df = L.marker(
+                [33.9603842, -118.446936],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_5759417ba8374886a3d162bb246f4d0d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ce93fb1cd0a437f8fba751c8bf9623e = $(`<div id="html_6ce93fb1cd0a437f8fba751c8bf9623e" style="width: 100.0%; height: 100.0%;">the Tripel</div>`)[0];
+            popup_5759417ba8374886a3d162bb246f4d0d.setContent(html_6ce93fb1cd0a437f8fba751c8bf9623e);
+        
+
+        marker_5b85c2a9900843bfbb07239881c4e6df.bindPopup(popup_5759417ba8374886a3d162bb246f4d0d)
+        ;
+
+        
+    
+    
+            var marker_a6b7119d1eee463986890f5fe6944220 = L.marker(
+                [34.0528158, -118.2637628],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_75a8a02ccb0149f587813e2868ebbc1e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1e0c4ea51444489f8e7b2f37f2a59d77 = $(`<div id="html_1e0c4ea51444489f8e7b2f37f2a59d77" style="width: 100.0%; height: 100.0%;">Plan Check</div>`)[0];
+            popup_75a8a02ccb0149f587813e2868ebbc1e.setContent(html_1e0c4ea51444489f8e7b2f37f2a59d77);
+        
+
+        marker_a6b7119d1eee463986890f5fe6944220.bindPopup(popup_75a8a02ccb0149f587813e2868ebbc1e)
+        ;
+
+        
+    
+    
+            var marker_0a7ea392c84a4d2dbfebe5b54efa8ab6 = L.marker(
+                [34.0762828, -118.2567722],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_bd7a9dd1e8ed46fd8513d6726d45edd8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_08499305adca41e3863863f8288d01db = $(`<div id="html_08499305adca41e3863863f8288d01db" style="width: 100.0%; height: 100.0%;">Lowboy</div>`)[0];
+            popup_bd7a9dd1e8ed46fd8513d6726d45edd8.setContent(html_08499305adca41e3863863f8288d01db);
+        
+
+        marker_0a7ea392c84a4d2dbfebe5b54efa8ab6.bindPopup(popup_bd7a9dd1e8ed46fd8513d6726d45edd8)
+        ;
+
+        
+    
+    
+            var marker_91e224d396c54c06817e79cad832a6e9 = L.marker(
+                [34.1101152, -118.1925562],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_740ada6a402f4f62aa1fe74fe6af0821 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_63510a8e616445398f677b9d92757f5c = $(`<div id="html_63510a8e616445398f677b9d92757f5c" style="width: 100.0%; height: 100.0%;">Otono</div>`)[0];
+            popup_740ada6a402f4f62aa1fe74fe6af0821.setContent(html_63510a8e616445398f677b9d92757f5c);
+        
+
+        marker_91e224d396c54c06817e79cad832a6e9.bindPopup(popup_740ada6a402f4f62aa1fe74fe6af0821)
+        ;
+
+        
+    
+    
+            var marker_4dcce84ddcf44d618caf328a900fbffa = L.marker(
+                [34.05065, -118.2487972],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_e6cb5c24178c4f6ab67a593ef6d12ef2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_866e0d8897a942b186409adcd6696bf9 = $(`<div id="html_866e0d8897a942b186409adcd6696bf9" style="width: 100.0%; height: 100.0%;">Belcampo Meat Co.</div>`)[0];
+            popup_e6cb5c24178c4f6ab67a593ef6d12ef2.setContent(html_866e0d8897a942b186409adcd6696bf9);
+        
+
+        marker_4dcce84ddcf44d618caf328a900fbffa.bindPopup(popup_e6cb5c24178c4f6ab67a593ef6d12ef2)
+        ;
+
+        
+    
+    
+            var marker_538bde41fa5d408ab5c3b39e76500355 = L.marker(
+                [34.09566220000001, -118.1265681],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_a064ab7099534a7087b64fb8b2366755 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_75cf9364ebe64e6a9ecb3503886d878c = $(`<div id="html_75cf9364ebe64e6a9ecb3503886d878c" style="width: 100.0%; height: 100.0%;">Grill 'Em All</div>`)[0];
+            popup_a064ab7099534a7087b64fb8b2366755.setContent(html_75cf9364ebe64e6a9ecb3503886d878c);
+        
+
+        marker_538bde41fa5d408ab5c3b39e76500355.bindPopup(popup_a064ab7099534a7087b64fb8b2366755)
+        ;
+
+        
+    
+    
+            var marker_33ef84478bfe4ef28fa110bac70038f7 = L.marker(
+                [34.065216, -118.23706090000002],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_e79fd584daa241b6b82a1fea2d4b8b38 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1bafd60fbe0440118a7e1b9d02c708a2 = $(`<div id="html_1bafd60fbe0440118a7e1b9d02c708a2" style="width: 100.0%; height: 100.0%;">Burgerlords</div>`)[0];
+            popup_e79fd584daa241b6b82a1fea2d4b8b38.setContent(html_1bafd60fbe0440118a7e1b9d02c708a2);
+        
+
+        marker_33ef84478bfe4ef28fa110bac70038f7.bindPopup(popup_e79fd584daa241b6b82a1fea2d4b8b38)
+        ;
+
+        
+    
+    
+            var marker_5e81555d63de4816837f14b95ad10e24 = L.marker(
+                [34.0089422, -118.49135859999998],
+                {}
+            ).addTo(marker_cluster_6c7956c2225b4cdd95485fcabc087bfd);
+        
+    
+        var popup_54f561841b1040b686ccc15bf3bebff8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f57943ba5b5c4774a24c21ee7c5d0087 = $(`<div id="html_f57943ba5b5c4774a24c21ee7c5d0087" style="width: 100.0%; height: 100.0%;">Herringbone Santa Monica</div>`)[0];
+            popup_54f561841b1040b686ccc15bf3bebff8.setContent(html_f57943ba5b5c4774a24c21ee7c5d0087);
+        
+
+        marker_5e81555d63de4816837f14b95ad10e24.bindPopup(popup_54f561841b1040b686ccc15bf3bebff8)
+        ;
+
+        
+    
+    
+            var layer_control_9f4b0e3a3ddc4d22a1826c6dc7e52e10 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_cdec64d848274978b75efabbc9136e9f,
+                },
+                overlays :  {
+                    "Restaurants" : geo_json_4392490161f84228b93bd2599898d781,
+                    "Open Hours" : geo_json_99f75cecab0e46509f20e8a9eb55bc78,
+                    "Concentration" : marker_cluster_6c7956c2225b4cdd95485fcabc087bfd,
+                },
+            };
+            L.control.layers(
+                layer_control_9f4b0e3a3ddc4d22a1826c6dc7e52e10.base_layers,
+                layer_control_9f4b0e3a3ddc4d22a1826c6dc7e52e10.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_83926591d9ce43c5a2ac8b72533ea84a);
+        
+</script>
