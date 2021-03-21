@@ -11,9 +11,9 @@ comment_list=[]
 
 
 ###Account_Info
-api_key='NRW4lhT6TdYSpTXi5YbwSgMdgt_YlbPIJthLFM6iL1jc-Y50HyHtv_IPVg4oDw_WWlDNN4h7JzzZwfcFQykneec_AzqmrV1dHaTOY6bJrouZIpoPbCLuPpBDk6CaXnYx'
+api_key="your_api_key"
 url = "https://api.yelp.com/v3//businesses/{id}/reviews"
-yelp_id='X1L0AXqPtWg9UUmFYSw-VQ'
+yelp_id='your_yelp_id'
 yelp_api = YelpAPI(api_key)
 
 ###Search Restaurants

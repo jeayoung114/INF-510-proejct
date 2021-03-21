@@ -2,7 +2,7 @@ import pandas as pd
 import googlemaps
 
 ### write your own api key
-api_key='AIzaSyC75rG-FIOK-chLkdpnmckBCuhdfcbasRA'
+api_key='your_api_key'
 
 ###import crawled csv data
 df=pd.read_csv("../Dataset/3_crawled_data_with_sentiment.csv")
